@@ -3,9 +3,9 @@ layout: post
 title:  Improve trust in text classification models using HuggingFace and BaaL
 ---
 
-As we introduce more deep learning models in production, it is essential that users trust decisions' made by our models. 
+As we introduce more deep learning models in production, it is essential that users trust decisions made by our models. 
 
-One of the worst experience for a user is when a model makes a wrong prediction with high confidence, they would stop trusting the model as the confidence does not match the expected performance.
+One of the worst experiences for a user is when a model makes a wrong prediction with high confidence, they would stop trusting the model as the confidence does not match the expected performance.
 
 This is what we call **calibration**, we can compute how well a model is calibrated using the **Expected calibration error** or **ECE**. This metric can be summarized as the weighted average of the difference between a model's confidence and its accuracy at multiple bins of confidence. Below, we have a visual explanation coming from the excellent paper of Guo et al. 2017.
 
@@ -15,13 +15,13 @@ We want to minimize the gaps in this diagram. In this post, we will improve a mo
 
 #### Load our HuggingFace Pipeline and Dataset.
 
-The HuggingFace ecosystem is simple to use and in just a few lines of code, we can have a pretrained model and its associated dataset. We will use the well-known SST2 dataset along with a DistilBERT model.
+The HuggingFace ecosystem is simple to use and in just a few lines of code, we can have a pre-trained model and its associated dataset. We will use the well-known SST2 dataset along with a DistilBERT model.
 
 #### Use MC-Dropout for better predictions with BaaL.
 
 BaaL is a Bayesian active learning library that will help us improve ECE.
 
-To do so, we will use Bayesian deep learning to gather multiple predictions for the same input. The key idea is that by drawing multiple sets of weights from the posterior distribution, the average prediction will be better than a single. This is not unalike Ensembles, but without retraining, we will call this a Bayesian Ensemble. Generally Ensembles are better, but require more computational power.
+To do so, we will use Bayesian deep learning to gather multiple predictions for the same input. The key idea is that by drawing multiple sets of weights from the posterior distribution, the average prediction will be better than a single. This is not unalike Ensembles, but without retraining, we will call this a Bayesian Ensemble. Generally, Ensembles are better but require more computational power.
 
 While we have ways to separate the model's uncertainty from the data's uncertainty, we will focus on the predictive uncertainty which is ultimately what will affect the calibration of the model.
 
@@ -48,7 +48,7 @@ We now run the model 20 times and compute the average prediction before computin
 
 Using 20 iterations, we improved our model's calibration by a significant margin. This is quite good!
 
-Let's investigate how more iterations means better ECE.
+Let's investigate how more iterations mean better ECE.
 
 
     
@@ -68,9 +68,9 @@ Testing our ECE at multiple iterations, we see that it converges quickly after ~
 
 ### Conclusion
 
-Using a couple of line of code, we can improve our model's calibration. While we now require multiple predictions per input, the cost should not be too prohibitive for most cases. If you have access to large GPUs, I suggest duplicating your dataset and aggregate the predictions at end. 
+Using a couple of lines of code, we can improve our model's calibration. While we now require multiple predictions per input, the cost should not be too prohibitive for most cases. If you have access to large GPUs, I suggest duplicating your dataset and aggregating the predictions at the end. 
 
-I did this analysis on an academic dataset where Bayesian deep learning has been extensively studied. In my next blog post, I will analyse a dataset closer to real data: [CLINC](https://github.com/clinc/oos-eval). 
+I did this analysis on an academic dataset where Bayesian deep learning has been extensively studied. In my next blog post, I will analyze a dataset closer to real data: [CLINC](https://github.com/clinc/oos-eval). 
 
 #### Links
 
@@ -80,14 +80,14 @@ I have gone quickly over Bayesian deep learning and MC-Dropout so here are some 
 
 
 Earlier, I mentioned model uncertainty versus data uncertainty, if you would like to know more I would recommend the following resources:
-* [Bayesian active learning for production, a systematic study and a reusable library
+* [Bayesian active learning for production, a systematic study, and a reusable library
 ](https://arxiv.org/abs/2006.09916) (Atighehchian et al. 2020)
 * [Synbols: Probing Learning Algorithms with Synthetic Datasets (Section 3.3)
 ](https://nips.cc/virtual/2020/public/poster_0169cf885f882efd795951253db5cdfb.html) (Lacoste et al. 2020)
 
 
-If you have any question or suggestion, please contact me at:
+If you have any questions or suggestion, please contact me at:
 1. @Dref360 on [Slack](https://join.slack.com/t/baal-world/shared_invite/zt-z0izhn4y-Jt6Zu5dZaV2rsAS9sdISfg)
 2. frederic.branchaud.charron@gmail.com
 
-I'm thinking of more blog posts combining HuggingFace and BaaL, let me know if that interest you!
+I'm thinking of more blog posts combining HuggingFace and BaaL, let me know if that interests you!
