@@ -11,7 +11,7 @@ This is what we call **calibration**, we can compute how well a model is calibra
 
 ![](https://i.imgur.com/WZCdroM.png)
 
-We want to minimize the gaps in this diagram. In this post, we will improve a model's calibration using HuggingFace and BaaL.
+We want to minimize the gaps in this diagram. In this post, we will improve a model's calibration using HuggingFace and BaaL. [The notebook is available here.](https://gist.github.com/Dref360/6a6fba8066a3346c53daaf6b961cffc5)
 
 #### Load our HuggingFace Pipeline and Dataset.
 
@@ -69,6 +69,10 @@ Testing our ECE at multiple iterations, we see that it converges quickly after ~
 ### Conclusion
 
 Using a couple of line of code, we can improve our model's calibration. While we now require multiple predictions per input, the cost should not be too prohibitive for most cases. If you have access to large GPUs, I suggest duplicating your dataset and aggregate the predictions at end. 
+
+I did this analysis on an academic dataset where Bayesian deep learning has been extensively studied. In my next blog post, I will analyse a dataset closer to real data: [CLINC](https://github.com/clinc/oos-eval). 
+
+#### Links
 
 I have gone quickly over Bayesian deep learning and MC-Dropout so here are some resources if you want to know more:
 1. [BaaL background literature](https://baal.readthedocs.io/en/latest/literature/core-papers.html)
