@@ -13,11 +13,19 @@ This is what we call **calibration**, we can compute how well a model is calibra
 
 We want to minimize the gaps in this diagram. In this post, we will improve a model's calibration using HuggingFace and BaaL. [The notebook is available here.](https://gist.github.com/Dref360/6a6fba8066a3346c53daaf6b961cffc5)
 
-#### Load our HuggingFace Pipeline and Dataset.
+### Load our HuggingFace Pipeline and Dataset.
 
 The HuggingFace ecosystem is simple to use and in just a few lines of code, we can have a pre-trained model and its associated dataset. We will use the well-known SST2 dataset along with a DistilBERT model.
 
-#### Use MC-Dropout for better predictions with BaaL.
+```python
+from datasets import load_dataset, Dataset
+from transformers import AutoTokenizer, TextClassificationPipeline, AutoModelForSequenceClassification
+
+pipeline : TextClassificationPipeline = load_model("distilbert-base-uncased-finetuned-sst-2-english", use_cuda=False)
+dataset : Dataset =  load_dataset("glue", "sst2")["validation"]
+```
+
+### Use MC-Dropout for better predictions with BaaL.
 
 BaaL is a Bayesian active learning library that will help us improve ECE.
 
@@ -60,13 +68,13 @@ Let's investigate how more iterations mean better ECE.
     
 
 
-#### Discussion
+### Discussion
 
 Testing our ECE at multiple iterations, we see that it converges quickly after ~40 iterations. While the accuracy takes a hit in the beginning, it quickly comes back. Of course, sampling brings **noise** to the prediction, but it stabilizes quickly with enough iterations.
 
 
 
-### Conclusion
+## Conclusion
 
 Using a couple of lines of code, we can improve our model's calibration. While we now require multiple predictions per input, the cost should not be too prohibitive for most cases. If you have access to large GPUs, I suggest duplicating your dataset and aggregating the predictions at the end. 
 

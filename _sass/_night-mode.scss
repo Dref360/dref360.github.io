@@ -13,6 +13,8 @@ body.night-mode {
   h6 {
     color: $night-mode-fg;
   }
+  .highlight .n { color: #d6e9e9 } /* Name */
+  .highlight .nn { color: #d6e9e9 } /* Name */
 
   .masthead,
   .post,
@@ -35,8 +37,7 @@ body.night-mode {
   }
 
   .highlight {
-    background-color: #202020;
-    border: 1px solid #000;
+    background-color: #121212;
   }
 
   nav a,
