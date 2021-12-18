@@ -38,9 +38,9 @@ This will modify the model of our loaded pipeline to use Dropout at test time.
 We now run the model 20 times and compute the average prediction before computing the ECE and the Accuracy. Below, we show the difference between both approaches.
 
 
-| | Bayesian | Frequentist |
-|--| -------  | ---------  |
-| ECE | 0.063 | 0.0802 |
+|          | Bayesian &nbsp;| Frequentist |
+|:---------:|:-------:|:---------:|
+| ECE      | 0.063 | 0.0802 |
 | Accuracy | 0.903 | 0.910 |
 
 
