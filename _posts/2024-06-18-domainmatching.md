@@ -22,7 +22,7 @@ Here's how domain matching can quickly and efficiently save you a lot of headach
 
 **References**
 
- To my knowledge, Kawahara et al.(1)  were the first to propose this idea. The main difference between our approaches is that Kawahara et al. train an SVM to detect "in-domain" topics whereas this implementation automatically finds topics based on similarity and is thus compatible with automatic topic model retraining.
+ To my knowledge, Kawahara et al.(1)  were the first to propose this idea. The main difference between our approaches is that Kawahara et al. train an SVM to detect "in-domain" topics whereas this implementation automatically finds topics based on similarity and is thus compatible with online topic modeling.
 
 ### Problem setting
 
