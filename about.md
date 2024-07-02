@@ -12,6 +12,14 @@ I'm an advocate for open-source and contribute regularly to [Huggingface](https:
 You can find a list of my publications on my [Google Scholar](https://scholar.google.com/citations?user=pHQH5TcAAAAJ&hl=en).
 
 
+<figure class="image">
+<a href="/images/resume.pdf">
+  <img src="/images/resume_icon.png" alt="resume" width="10%"/>
+  <figcaption>My Resume as of July 2024</figcaption>
+  </a>
+</figure>
+
+
 ### Interests
 * Structured generation
 * Active learning
@@ -24,5 +32,3 @@ You can find a list of my publications on my [Google Scholar](https://scholar.go
 * [frederic.branchaud.charron@gmail.com](mailto:frederic.branchaud.charron@gmail.com)
 
 * @Dref360 on most platforms. Feel free to PM me!
-
-* [My Resume as of June 2024](/images/resume.pdf)
