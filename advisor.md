@@ -20,31 +20,32 @@ Partner with me to:
 
 Let's collaborate to unlock the full potential of AI for your business.
 
-[Book a meeting today!](https://calendar.app.google/E2G4m4Wn2UFXcidg8)
+[<i class="fa fa-calendar"/> Book a meeting today!](https://calendar.app.google/E2G4m4Wn2UFXcidg8)
 
 ## Services
 
 1. **Project Validation**
-    1. Determine the feasibility of a project.
+    1. Determine the feasibility of a project, and architecture design.
 2. **Data Exploration**
     1. Let me explore your data and surface actionable insights.
 3. **Applied Research**
     1. Implement efficient methods for your use case and get evaluation results.
 4. **Model Improvement**
-    1. Using SotA methods, I'll improve your datasets and models' performance.
+    1. Using SotA methods, I'll analyze and improve your datasets and models.
 5. **Implementation**
-    1. Implement and deploy AI projects.
+    1. End-to-end implementation and deployment of AI projects.
 
 
-Of course, [contact me](mailto:frederic.branchaud.charron@gmail.com) for other types of inquiries and we will figure out something together!
+Of course, [<i class="fa fa-address-book"/> contact me](mailto:frederic.branchaud.charron@gmail.com) for other types of inquiries and we will figure out something together!
 
-## Past Customers
+## Past Advisorships
 
 1. **Glowstick (B2B SaaS company in Sales)**
     1. Built the v1 of a topic modeling pipeline on meeting transcripts.
     2. Evaluate transcript quality.
     3. Proposed unsupervised solutions, allowing them to quickly get product validation.
+    4. Eventually joined the company as the Founding ML Engineer
 2. **Stealth Startup (B2C SaaS company in Legal)**
-    1. Estimating the effort and risk of AI features.
+    1. Estimating the effort and risk of AI features for document drafting.
     2. Architecture design for ML Pipeline.
 
