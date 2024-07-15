@@ -7,6 +7,9 @@ permalink: /advisor/
 
 **Enjoy the services of a renowned AI Expert by hiring me as your advisor!**
 
+>  "Fred accelerated our time to initial product by at least half a year." 
+> -- <cite>Anwar, CTO of Glowstick</cite>
+
 With five years of proven success in the B2B sector, I specialize in transforming abstract AI concepts into tangible, value-driven solutions for both you and your clients.
 
 I'm a very pragmatic person and I favor the best methods for your use cases according to your needs.
