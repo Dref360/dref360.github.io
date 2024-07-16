@@ -44,4 +44,12 @@ body.night-mode {
   .site-description {
     color: #ccc;
   }
+
+  blockquote {
+    margin: 0;
+  }
+  
+  blockquote p {
+    background: #7c7b7b;
+  }
 }
