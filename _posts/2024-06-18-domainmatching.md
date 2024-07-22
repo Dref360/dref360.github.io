@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Domain Matching to filter out-of-distribution obversations"
+title: "Domain Matching to filter out-of-distribution observations"
 usemathjax: true
 ---
 
