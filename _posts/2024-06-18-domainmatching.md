@@ -4,6 +4,8 @@ title: "Domain Matching to filter out-of-distribution observations"
 usemathjax: true
 ---
 
+**Update**: Our code is now on [GitHub](https://github.com/GlowstickAI/domain-matcher). 
+
 
 More than ever, protecting models from out-of-distribution samples is of tremendous importance. 
 
